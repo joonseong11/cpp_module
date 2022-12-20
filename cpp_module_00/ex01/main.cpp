@@ -1,7 +1,8 @@
-class	PhoneBook {
-	Contact[8];
+#include "Contact.hpp"
+
+int	main()
+{
+	
 }
 
-class	Contact {
 
-}
