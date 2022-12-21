@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string.h>
+#include <string>
 
 using std::string;
 
@@ -17,27 +17,9 @@ class Contact {
 		string darkest_secret;
 
 	public:
-		bool AddFirstName();
-		bool AddLastName();
-		bool AddNickName();
-		bool AddPhoneNumber();
-		bool AddDarkestSecret();
+		bool AddFirstName(string _first_name);
+		bool AddLastName(string _last_name);
+		bool AddNickName(string _nick_name);
+		bool AddPhoneNumber(string _phone_number);
+		bool AddDarkestSecret(string _darkest_secret);
 };
-
-#include "Contact.hpp"
-
-bool Contact::AddFirstName(string _first_name) {
-	if (_first_name) {
-		first_name = _first_name;
-		return TRUE;
-	}
-	return FALSE;
-}
-
-bool Contact::AddLastName(string _first_name) {
-	if (_first_name) {
-		first_name = _first_name;
-		return TRUE;
-	}
-	return FALSE;
-}
