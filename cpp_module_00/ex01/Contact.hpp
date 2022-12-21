@@ -1,5 +1,7 @@
 #include <iostream>
-#include <string>
+#include <string.h>
+
+using std::string;
 
 class PhoneBook {
 	private:
@@ -8,16 +10,34 @@ class PhoneBook {
 
 class Contact {
 	private:
-	 std::string first_name;
-	 std::string last_name;
-	 std::string nickname;
-	 std::string phone_number;
-	 std::string darkest_secret;
+		string first_name;
+		string last_name;
+		string nickname;
+		string phone_number;
+		string darkest_secret;
 
 	public:
-		void add_firstname();
-		void add_lastname();
-		void add_nickname();
-		void add_phone_number();
-		void add_darkest_secret();
+		bool AddFirstName();
+		bool AddLastName();
+		bool AddNickName();
+		bool AddPhoneNumber();
+		bool AddDarkestSecret();
 };
+
+#include "Contact.hpp"
+
+bool Contact::AddFirstName(string _first_name) {
+	if (_first_name) {
+		first_name = _first_name;
+		return TRUE;
+	}
+	return FALSE;
+}
+
+bool Contact::AddLastName(string _first_name) {
+	if (_first_name) {
+		first_name = _first_name;
+		return TRUE;
+	}
+	return FALSE;
+}
