@@ -1,19 +1,20 @@
-NAME	= megaphone
+NAME	= phonebook
 
-CC		= c++
-CFLAGS	= -Wall -Wextra -Werror
+CXX		= c++
+CXXFLAGS	= -Wall -Wextra -Werror
 
-SRC = megaphone.cpp
+SRC = .cpp \
+		.hpp
 
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CXX) $(CFLAGS) -o $@ $^
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c -o $@ $^
+	$(CXX) $(CFLAGS) -c -o $@ $^
 
 clean:
 	rm -f $(OBJ)
