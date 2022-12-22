@@ -1,9 +1,14 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::setw;
 
-class Contact {
+class Contact { 
 	private:
 		string first_name;
 		string last_name;
@@ -17,4 +22,5 @@ class Contact {
 		bool AddNickName(string _nick_name);
 		bool AddPhoneNumber(string _phone_number);
 		bool AddDarkestSecret(string _darkest_secret);
+		string GetInfo(int i);
 };

@@ -39,3 +39,18 @@ bool Contact::AddDarkestSecret(string _darkest_secret) {
 	}
 	return 0;
 }
+
+string Contact::GetInfo(int i) {
+	if (i == 0)
+		return first_name;
+	else if (i == 1)
+		return last_name;
+	else if (i == 2)
+		return nickname;
+	else if (i == 3)
+		return phone_number;
+	else if (i == 4)
+		return darkest_secret;
+	else
+		return "err";
+}

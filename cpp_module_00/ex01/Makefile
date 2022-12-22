@@ -1,10 +1,11 @@
 NAME	= phonebook
 
 CXX		= c++
-CXXFLAGS	= -Wall -Wextra -Werror
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRC = .cpp \
-		.hpp
+SRC = Contact.cpp \
+		PhoneBook.cpp \
+		main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -22,4 +23,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: all clean fclean
+re: fclean all
+
+.PHONY: all clean fclean re
