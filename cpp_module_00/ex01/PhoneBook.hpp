@@ -1,16 +1,16 @@
-class PhoneBook
-{
-private:
-	/* data */
-public:
-	PhoneBook(/* args */);
-	~PhoneBook();
+#include "Contact.hpp"
+
+class PhoneBook {
+	private:
+		Contact contacts[8];
+		unsigned int cnt;
+	private:
+		PhoneBook() {
+			cnt = 0;
+		};
+		bool AddPhoneBook(Contact _contact);
 };
 
-PhoneBook::PhoneBook()
-{
-}
-
-PhoneBook::~PhoneBook()
-{
+bool PhoneBook::AddPhoneBook(Contact _contact) {
+	
 }

@@ -3,11 +3,6 @@
 
 using std::string;
 
-class PhoneBook {
-	private:
-		Contact array[8];
-};
-
 class Contact {
 	private:
 		string first_name;

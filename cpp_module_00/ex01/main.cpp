@@ -1,14 +1,12 @@
 // #include "Contact.hpp"
 #include <iostream>
 #include "Contact.hpp"
+#include "PhoneBook.hpp"
+
 using std::string;
 using std::cin;
-
-void warp_getline(istream& is, string& str)
-{
-	
-	return ;
-}
+using std::cout;
+using std::endl;
 
 int	main()
 {
@@ -21,8 +19,22 @@ int	main()
 		if (input == "EXIT") {
 			return 0;
 		} else if (input == "ADD") {
-			wrap_getline(cin, input);
+			cout << "Type your first name" << endl;
+			getline(cin, input);
 			contact.AddFirstName(input);
+			cout << "Type your last name" << endl;
+			getline(cin, input);
+			contact.AddLastName(input);
+			cout << "Type your nickname" << endl;
+			getline(cin, input);
+			contact.AddNickName(input);
+			cout << "Type your phone number" << endl;
+			getline(cin, input);
+			contact.AddPhoneNumber(input);
+			cout << "Type your darkest secret name" << endl;
+			getline(cin, input);
+			contact.AddDarkestSecret(input);
+			phonebook.
 		} else if (input == "SEARCH") {
 
 		} else {
