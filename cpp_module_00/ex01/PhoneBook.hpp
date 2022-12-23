@@ -1,4 +1,7 @@
-#include "Contact.hpp"
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
+
+# include "Contact.hpp"
 
 class PhoneBook {
 	private:
@@ -14,3 +17,5 @@ class PhoneBook {
 };
 
 int WrapGetLine(std::string &_input);
+
+#endif

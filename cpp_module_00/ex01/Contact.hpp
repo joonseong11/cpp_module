@@ -1,6 +1,9 @@
-#include <iostream>
-#include <string>
-#include <iomanip>
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+
+# include <iostream>
+# include <string>
+# include <iomanip>
 
 class Contact { 
 	private:
@@ -18,3 +21,4 @@ class Contact {
 		bool AddDarkestSecret(std::string _darkest_secret);
 		std::string GetInfo(int i);
 };
+#endif
