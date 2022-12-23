@@ -1,107 +1,107 @@
 #include "PhoneBook.hpp"
 
-void WarpGetLine(string &_input)
+int WrapGetLine(std::string &_input)
 {
-	while (1)
+	while (getline(std::cin, _input))
 	{
-		getline(cin, _input);
 		if (!_input.empty())
 		{
-			return;
+			return 0;
 		}
 	}
+	return 1;
 }
 
 int SearchGetLine(int _index)
 {
 	while (1)
 	{
-		cin >> _index;
-		if (!cin.fail() && 0 <= _index && _index <= 7)
+		std::cin >> _index;
+		if (!std::cin.fail() && 0 <= _index && _index <= 7)
 		{
 			return _index;
 		}
-		cin.clear();
-		cin.ignore(256, '\n');
+		std::cin.clear();
+		std::cin.ignore(256, '\n');
 	}
 }
 
 void PhoneBook::PrintTable(int _index)
 {
-	cout << "first name : " << contacts[_index].GetInfo(0) << endl;
-	cout << "last name : " << contacts[_index].GetInfo(1) << endl;
-	cout << "nick name : " << contacts[_index].GetInfo(2) << endl;
-	cout << "phone number : " << contacts[_index].GetInfo(3) << endl;
-	cout << "darkest secret : " << contacts[_index].GetInfo(4) << endl;
+	std::cout << "first name : " << contacts[_index].GetInfo(0) << std::endl;
+	std::cout << "last name : " << contacts[_index].GetInfo(1) << std::endl;
+	std::cout << "nick name : " << contacts[_index].GetInfo(2) << std::endl;
+	std::cout << "phone number : " << contacts[_index].GetInfo(3) << std::endl;
+	std::cout << "darkest secret : " << contacts[_index].GetInfo(4) << std::endl;
 }
 
 void PhoneBook::SearchContact()
 {
 	int index;
-	cout << "which index?" << endl;
+	std::cout << "which index?" << std::endl;
 	index = SearchGetLine(index);
 	PrintTable(index);
-	cin.clear();
-	cin.ignore(256, '\n');
+	std::cin.clear();
+	std::cin.ignore(256, '\n');
 }
 
 void PhoneBook::ShowPhoneBook()
 {
-	cout << "|";
-	cout << setw(10);
-	cout << "index";
-	cout << "|";
-	cout << setw(10);
-	cout << "first name";
-	cout << "|";
-	cout << setw(10);
-	cout << "last name";
-	cout << "|";
-	cout << setw(10);
-	cout << "nickname";
-	cout << "|" << endl;
+	std::cout << "|";
+	std::cout << std::setw(10);
+	std::cout << "index";
+	std::cout << "|";
+	std::cout << std::setw(10);
+	std::cout << "first name";
+	std::cout << "|";
+	std::cout << std::setw(10);
+	std::cout << "last name";
+	std::cout << "|";
+	std::cout << std::setw(10);
+	std::cout << "nickname";
+	std::cout << "|" << std::endl;
 	for (int i = 0; i < cnt; i++)
 	{
-		cout << "|";
-		cout << setw(10);
-		cout << i;
+		std::cout << "|";
+		std::cout << std::setw(10);
+		std::cout << i;
 		for (int j = 0; j < 3; j++)
 		{
-			cout << "|";
-			cout << setw(10);
+			std::cout << "|";
+			std::cout << std::setw(10);
 			if (contacts[i].GetInfo(j).length() > 10)
 			{
-				cout << contacts[i].GetInfo(j).substr(0, 9) + ".";
+				std::cout << contacts[i].GetInfo(j).substr(0, 9) + ".";
 			}
 			else
 			{
-				cout << contacts[i].GetInfo(j);
+				std::cout << contacts[i].GetInfo(j);
 			}
 		}
-		cout << "|" << endl;
+		std::cout << "|" << std::endl;
 	}
 	SearchContact();
 }
 
 bool PhoneBook::AddPhoneBook(Contact _contact)
 {
-	string _input;
-	cout << "Type your first name" << endl;
-	WarpGetLine(_input);
+	std::string _input;
+	std::cout << "Type your first name" << std::endl;
+	WrapGetLine(_input);
 	_contact.AddFirstName(_input);
 	_input.clear();
-	cout << "Type your last name" << endl;
-	WarpGetLine(_input);
+	std::cout << "Type your last name" << std::endl;
+	WrapGetLine(_input);
 	_contact.AddLastName(_input);
 	_input.clear();
-	cout << "Type your nickname" << endl;
-	WarpGetLine(_input);
+	std::cout << "Type your nickname" << std::endl;
+	WrapGetLine(_input);
 	_contact.AddNickName(_input);
-	cout << "Type your phone number" << endl;
-	WarpGetLine(_input);
+	std::cout << "Type your phone number" << std::endl;
+	WrapGetLine(_input);
 	_contact.AddPhoneNumber(_input);
-	cout << "Type your darkest secret name" << endl;
-	WarpGetLine(_input);
+	std::cout << "Type your darkest secret name" << std::endl;
+	WrapGetLine(_input);
 	_contact.AddDarkestSecret(_input);
 	contacts[index % 8] = _contact;
 	index = (index % 8) + 1;

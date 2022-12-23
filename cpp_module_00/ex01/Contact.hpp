@@ -4,17 +4,17 @@
 
 class Contact { 
 	private:
-		string first_name;
-		string last_name;
-		string nickname;
-		string phone_number;
-		string darkest_secret;
+		std::string first_name;
+		std::string last_name;
+		std::string nickname;
+		std::string phone_number;
+		std::string darkest_secret;
 
 	public:
-		bool AddFirstName(string _first_name);
-		bool AddLastName(string _last_name);
-		bool AddNickName(string _nick_name);
-		bool AddPhoneNumber(string _phone_number);
-		bool AddDarkestSecret(string _darkest_secret);
-		string GetInfo(int i);
+		bool AddFirstName(std::string _first_name);
+		bool AddLastName(std::string _last_name);
+		bool AddNickName(std::string _nick_name);
+		bool AddPhoneNumber(std::string _phone_number);
+		bool AddDarkestSecret(std::string _darkest_secret);
+		std::string GetInfo(int i);
 };

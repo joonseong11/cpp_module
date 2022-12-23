@@ -11,3 +11,5 @@ class PhoneBook {
 		void PrintTable(int _index);
 		void SearchContact();
 };
+
+int WrapGetLine(std::string &_input);

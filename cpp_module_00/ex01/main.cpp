@@ -2,13 +2,16 @@
 
 int	main()
 {
-	string input;
+	std::string input;
 	PhoneBook phonebook;
 	Contact contact;
+	int stat;
 
-	do {
-		cout << "choose 1 of commands which ADD, SEARCH, EXIT" << endl;
-		getline(cin, input);
+	while (1) {
+		std::cout << "choose 1 of commands which ADD, SEARCH, EXIT" << std::endl;
+		stat = WrapGetLine(input);
+		if (stat == 1)
+			return 0;
 		if (input == "EXIT") {
 			return 0;
 		} else if (input == "ADD") {
@@ -17,6 +20,5 @@ int	main()
 			phonebook.ShowPhoneBook();
 		}
 	}
-	while (1) ;
 	return 0;
 }
