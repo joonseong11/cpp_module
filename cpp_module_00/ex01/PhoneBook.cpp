@@ -1,5 +1,10 @@
 #include "PhoneBook.hpp"
 
+PhoneBook::PhoneBook() {
+	cnt = 0;
+	index = 0;
+}
+
 int WrapGetLine(std::string &_input)
 {
 	while (getline(std::cin, _input))
@@ -12,18 +17,21 @@ int WrapGetLine(std::string &_input)
 	return 1;
 }
 
-int SearchGetLine(int _index)
+int SearchGetLine(int& _index)
 {
-	while (1)
+	int input;
+	while (!std::cin.eof())
 	{
-		std::cin >> _index;
-		if (!std::cin.fail() && 0 <= _index && _index <= 7)
+		std::cin >> input;
+		if (!std::cin.fail() && 0 <= input && input <= 7)
 		{
-			return _index;
+			_index = input;
+			return 0;
 		}
 		std::cin.clear();
-		std::cin.ignore(256, '\n');
+		std::cin.ignore();
 	}
+	return 1;
 }
 
 void PhoneBook::PrintTable(int _index)
@@ -39,10 +47,11 @@ void PhoneBook::SearchContact()
 {
 	int index;
 	std::cout << "which index?" << std::endl;
-	index = SearchGetLine(index);
+	if (SearchGetLine(index) == 1)
+		exit(1);
 	PrintTable(index);
-	std::cin.clear();
-	std::cin.ignore(256, '\n');
+	// std::cin.clear();
+	// std::cin.ignore(256, '\n');
 }
 
 void PhoneBook::ShowPhoneBook()

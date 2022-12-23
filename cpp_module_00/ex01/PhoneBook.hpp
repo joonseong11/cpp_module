@@ -6,6 +6,7 @@ class PhoneBook {
 		unsigned int cnt;
 		unsigned int index;
 	public:
+		PhoneBook();
 		void ShowPhoneBook();
 		bool AddPhoneBook(Contact _contact);
 		void PrintTable(int _index);
