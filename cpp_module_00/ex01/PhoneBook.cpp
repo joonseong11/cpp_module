@@ -50,8 +50,6 @@ void PhoneBook::SearchContact()
 	if (SearchGetLine(index) == 1)
 		exit(1);
 	PrintTable(index);
-	// std::cin.clear();
-	// std::cin.ignore(256, '\n');
 }
 
 void PhoneBook::ShowPhoneBook()
