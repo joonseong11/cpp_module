@@ -2,7 +2,7 @@
 
 Zombie::~Zombie()
 {
-	std::cout << name << "is destructed" << std::endl;
+	std::cout << name << " is destructed" << std::endl;
 }
 void Zombie::announce(void)
 {
