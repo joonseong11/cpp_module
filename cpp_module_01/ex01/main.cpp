@@ -3,10 +3,8 @@
 int main()
 {
 	Zombie *zombies = zombieHorde(3, "horde1");
-	// zombies->debug(zombies[0]);
-	// zombies->debug(zombies[1]);
-	// zombies->debug(zombies[2]);
-	// zombies->debug(zombies[3]);
-	// zombies[0].announce();
+	zombies[0].announce();
+	zombies[1].announce();
+	zombies[2].announce();
 	delete[] zombies;
-}gi
+}
