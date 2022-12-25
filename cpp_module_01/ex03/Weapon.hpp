@@ -12,6 +12,22 @@ class Weapon {
 	 void setType();
 };
 
+class HumanA {
+	private:
+	 std::string name;
+	 Weapon weapon;
 
+	public:
+	 void attack();
+};
+
+class HumanB {
+ private:
+	 std::string name;
+	 Weapon weapon;
+
+ public:
+	 void attack();
+};
 
 #endif
