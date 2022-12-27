@@ -1,0 +1,10 @@
+{
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "make debug output",
+			"command": "c++ ./cpp_module_01/ex03/main.cpp ./cpp_module_01/ex03/Weapon.hpp -g3",
+		}
+	],
+	"version": "2.0.0"
+}

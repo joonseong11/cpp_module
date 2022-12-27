@@ -6,28 +6,19 @@
 
 class Weapon {
 	private:
-	 std::string str;
+	 std::string type;
 	public:
-	 const& getType();
-	 void setType();
+	 Weapon(std::string type);
+	 const std::string& getType();
+	 void setType(std::string type);
 };
-
-class HumanA {
-	private:
-	 std::string name;
-	 Weapon weapon;
-
-	public:
-	 void attack();
-};
-
-class HumanB {
- private:
-	 std::string name;
-	 Weapon weapon;
-
- public:
-	 void attack();
-};
-
+Weapon::Weapon(std::string type) {
+	this->type = type;
+}
+const std::string& Weapon::getType() {
+	return this->type;
+}
+void Weapon::setType(std::string type) {
+	this->type = type;
+}
 #endif
