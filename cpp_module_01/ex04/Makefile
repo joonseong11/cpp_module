@@ -1,10 +1,9 @@
-NAME	= weapon
+NAME	= sed
 
 CXX		= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp \
-	sed.cpp \
+SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

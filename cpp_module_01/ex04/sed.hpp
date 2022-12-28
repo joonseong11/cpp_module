@@ -1,11 +1,8 @@
 #ifndef SED_HPP
 # define SED_HPP
 
-class sed
-{
-	private:
-	public:
-		sed(void);
-};
+# include <iostream>
+# include <string>
+# include <fstream>
 
 #endif
