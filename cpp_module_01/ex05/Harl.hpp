@@ -14,5 +14,4 @@ class Harl
 	public:
 		void complain( std::string level );
 };
-
 #endif
