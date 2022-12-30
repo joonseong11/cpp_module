@@ -1,4 +1,4 @@
-NAME	= OCFC
+NAME	= useful
 
 CXX		= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
