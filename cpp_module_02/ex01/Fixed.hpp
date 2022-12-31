@@ -27,8 +27,10 @@ class Fixed
 		~Fixed(void);
 };
 
-std::ostream &operator<<(std::ostream &out, Fixed const &value);
-
+std::ostream &operator<<(std::ostream &out, Fixed const &value){
+	out << value.toFloat(); 
+	return out;
+}
 Fixed::Fixed(void)
 {
 	std::cout << "Default constructor called" << std::endl;
@@ -70,10 +72,10 @@ Fixed::Fixed(const float fl)
 }
 float Fixed::toFloat(void) const
 {
-	return fixedPointNum * (1 >> fractionBit);
+	return fixedPointNum / (1 << fractionBit);
 }
 int Fixed::toInt(void) const
 {
-	return fixedPointNum * (1 << fractionBit);
+	return fixedPointNum * (1 >> fractionBit);
 }
 #endif
