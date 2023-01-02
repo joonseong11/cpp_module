@@ -4,7 +4,7 @@
 		"name": "(lldb) Launch",
 		"type": "cppdbg",
 		"request": "launch",
-		"program": "${workspaceFolder}/cpp_module_01/ex03/a.out",
+		"program": "${workspaceFolder}/cpp_module_02/ex01/a.out",
 		"args": [],
 		"stopAtEntry": false,
 		"cwd": "${fileDirname}",
