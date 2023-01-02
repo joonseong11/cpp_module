@@ -1,9 +1,9 @@
-NAME	= taliking
+NAME	= open
 CXX		= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp \
-		Fixed.cpp
+		ClapTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
