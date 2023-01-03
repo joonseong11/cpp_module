@@ -64,6 +64,9 @@
 		"algorithm": "cpp",
 		"deque": "cpp",
 		"fstream": "cpp",
-		"stack": "cpp"
+		"stack": "cpp",
+		"iterator": "cpp",
+		"memory_resource": "cpp",
+		"filesystem": "cpp"
 	}
 }
