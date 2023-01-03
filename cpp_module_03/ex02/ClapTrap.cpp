@@ -43,9 +43,9 @@ void ClapTrap::takedamage(unsigned int amount) {
     std::cout << "ClapTrap " << this->name << " take damage amount of "
               << amount << std::endl;
     this->HitPoint = 0;
-    std::cout << "your class die" << std::endl;
+    std::cout << "your ClapTrap die" << std::endl;
   } else
-    std::cout << "your class die" << std::endl;
+    std::cout << "your ClapTrap die" << std::endl;
 }
 void ClapTrap::beRepaired(unsigned int amount) {
   if (this->HitPoint > 0 && this->EnergyPoint > 0) {

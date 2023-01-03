@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
 
 	std::ifstream in(filename);
 	newname.append(".replace");
-	std::ofstream out(newname, std::ios::app);
+	std::ofstream out(newname);
 
 	if (!in.is_open()) {
 		std::cout << "file doesn't exist or cannot open the file" << std::endl;
@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
 			index = data.find(s1, index);
 			if (index != std::string::npos) {
 				data.insert(index, s2);
-				data.erase(index + s1.length(), s1.length());
+				data.erase(index + s2.length(), s1.length());
 			}
 			else
 				break;

@@ -8,8 +8,9 @@ ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
 	this->AttackDamage = rhs.AttackDamage;
 	return *this;
 }
-ClapTrap::ClapTrap(void) {
-	std::cout << "the constructor is called" << std::endl;
+ClapTrap::ClapTrap(void) : name("default"), HitPoint(10), EnergyPoint(10),
+    AttackDamage(0) {
+        std::cout << "the constructor is called" << std::endl;
 }
 ClapTrap::ClapTrap(const ClapTrap& src)
 	: name(src.name), HitPoint(src.HitPoint), EnergyPoint(src.HitPoint), AttackDamage(src.AttackDamage) {
