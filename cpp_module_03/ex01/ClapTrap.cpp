@@ -7,10 +7,12 @@ ClapTrap& ClapTrap::operator=(ClapTrap const& rhs) {
   this->AttackDamage = rhs.AttackDamage;
   return *this;
 }
+
 ClapTrap::ClapTrap(void)
     : name("default"), HitPoint(10), EnergyPoint(10), AttackDamage(0) {
   std::cout << "the constructor is called" << std::endl;
 }
+
 ClapTrap::ClapTrap(const ClapTrap& src)
     : name(src.name),
       HitPoint(src.HitPoint),
@@ -18,13 +20,16 @@ ClapTrap::ClapTrap(const ClapTrap& src)
       AttackDamage(src.AttackDamage) {
   std::cout << "the copy constructor is called" << std::endl;
 }
+
 ClapTrap::ClapTrap(std::string str)
     : name(str), HitPoint(10), EnergyPoint(10), AttackDamage(0) {
   std::cout << "the constructor is called" << std::endl;
 }
+
 ClapTrap::~ClapTrap(void) {
   std::cout << "the destructor is called" << std::endl;
 }
+
 void ClapTrap::attack(const std::string& target) {
   if (this->EnergyPoint > 0 && this->HitPoint > 0) {
     std::cout << "ClapTrap " << this->name << " attacks " << target
@@ -34,6 +39,7 @@ void ClapTrap::attack(const std::string& target) {
   } else
     std::cout << "ClapTrap Cannot attack" << std::endl;
 }
+
 void ClapTrap::takedamage(unsigned int amount) {
   if (this->HitPoint > amount) {
     std::cout << "ClapTrap " << this->name << " take damage amount of "
@@ -47,6 +53,7 @@ void ClapTrap::takedamage(unsigned int amount) {
   } else
     std::cout << "your class die" << std::endl;
 }
+
 void ClapTrap::beRepaired(unsigned int amount) {
   if (this->HitPoint > 0 && this->EnergyPoint > 0) {
     std::cout << "ClapTrap " << this->name << " be repaired (" << amount
