@@ -37,3 +37,13 @@ ScavTrap& ScavTrap::operator=(ScavTrap const& rhs) {
 void ScavTrap::guardGate() {
   std::cout << "ScavTrap is now in Gatekeeper mode" << std::endl;
 }
+
+void ScavTrap::attack(const std::string& target) {
+  if (this->EnergyPoint > 0 && this->HitPoint > 0) {
+    std::cout << "ClapTrap " << this->name << " attacks " << target
+              << " causing " << this->AttackDamage << " points of damage!"
+              << std::endl;
+    this->EnergyPoint -= 1;
+  } else
+    std::cout << "ClapTrap Cannot attack" << std::endl;
+}

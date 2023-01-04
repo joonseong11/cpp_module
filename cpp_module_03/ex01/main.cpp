@@ -3,11 +3,11 @@
 int main() {
 	std::cout << "======================" << std::endl;
 	std::cout << "Create ClapTrap class" << std::endl;
-	ClapTrap a("ClapTrap_a");
+	ClapTrap a("C_a");
 
 	std::cout << "======================" << std::endl;
 	std::cout << "Create ScavTrap class" << std::endl;
-	ScavTrap b("ScavTrap_b");
+	ScavTrap b("S_b");
 
 	std::cout << "======================" << std::endl;
 	b.guardGate();
