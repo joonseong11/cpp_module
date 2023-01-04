@@ -37,7 +37,7 @@ class Fixed {
 
   static Fixed &min(Fixed &a, Fixed &b);
   static Fixed const &min(Fixed const &a, Fixed const &b);
-  static Fixed const &max(Fixed &a, Fixed &b);
+  static Fixed &max(Fixed &a, Fixed &b);
   static Fixed const &max(Fixed const &a, Fixed const &b);
 
   int getRawBits(void) const;

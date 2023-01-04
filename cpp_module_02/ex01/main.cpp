@@ -1,5 +1,11 @@
 #include "Fixed.hpp"
 
+Fixed function(Fixed a)
+{
+	std::cout << "hi" << std::endl;
+	return a;
+}
+
 int main() {
 	Fixed		a;
 	Fixed const b(10);
@@ -17,5 +23,6 @@ int main() {
 	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	function(a);
 	return 0;
 }
