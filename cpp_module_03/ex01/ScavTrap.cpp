@@ -47,3 +47,27 @@ void ScavTrap::attack(const std::string& target) {
   } else
     std::cout << "ClapTrap Cannot attack" << std::endl;
 }
+
+void ClapTrap::takedamage(unsigned int amount) {
+  if (this->HitPoint > amount) {
+    std::cout << "ClapTrap " << this->name << " take damage amount of "
+              << amount << std::endl;
+    this->HitPoint -= amount;
+  } else if (this->HitPoint > 0) {
+    std::cout << "ClapTrap " << this->name << " take damage amount of "
+              << amount << std::endl;
+    this->HitPoint = 0;
+    std::cout << "your class die" << std::endl;
+  } else
+    std::cout << "your class die" << std::endl;
+}
+
+void ClapTrap::beRepaired(unsigned int amount) {
+  if (this->HitPoint > 0 && this->EnergyPoint > 0) {
+    std::cout << "ClapTrap " << this->name << " be repaired (" << amount
+              << "points)" << std::endl;
+    this->EnergyPoint -= 1;
+    this->HitPoint += amount;
+  } else
+    std::cout << "ClapTrap Cannot be repaired" << std::endl;
+}
