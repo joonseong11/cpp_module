@@ -1,11 +1,13 @@
-NAME	= Repeitive
+NAME	= fire
 CXX		= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp \
-		ClapTrap.cpp \
-		ScavTrap.cpp \
-		FlagTrap.cpp
+		Animal.cpp \
+		Cat.cpp \
+		Dog.cpp \
+		WrongAnimal.cpp \
+		WrongCat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

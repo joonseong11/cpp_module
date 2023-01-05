@@ -19,7 +19,7 @@ class ClapTrap {
 		ClapTrap& operator=(ClapTrap const& rhs);
 
 		virtual void attack(const std::string& target);
-		virtual void takedamage(unsigned int amount);
-		virtual void beRepaired(unsigned int amount);
+		void takedamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
 };
 #endif

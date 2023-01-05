@@ -1,9 +1,13 @@
-#ifndef DiamondTrap_HPP
-# define DiamondTrap_HPP
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 
-class DiamondTrap
+#include "ScavTrap.hpp"
+#include "FlagTrap.hpp"
+
+class DiamondTrap : virtual public ScavTrap, virtual public FlagTrap
 {
 	private:
+	std::string name;
 	public:
 		DiamondTrap(void);
 		DiamondTrap(const DiamondTrap& src);

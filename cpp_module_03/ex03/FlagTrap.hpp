@@ -15,7 +15,5 @@ class FlagTrap : public ClapTrap
 		void highFivesGyus(void);
 
 		void attack(const std::string& target);
-		void takedamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 };
 #endif

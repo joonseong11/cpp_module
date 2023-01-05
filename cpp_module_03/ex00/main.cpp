@@ -11,5 +11,5 @@ int main() {
 	a.beRepaired(5);
 	a.takedamage(10);
 	a.beRepaired(5);
-
+	return 0;
 }

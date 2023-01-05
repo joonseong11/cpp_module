@@ -13,7 +13,5 @@ class ScavTrap : public ClapTrap {
 		void guardGate();
 		
 		void attack(const std::string& target);
-		void takedamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 };
 #endif

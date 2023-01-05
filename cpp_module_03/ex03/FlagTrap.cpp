@@ -43,27 +43,3 @@ void FlagTrap::attack(const std::string& target) {
   } else
     std::cout << "FlagTrap Cannot attack" << std::endl;
 }
-
-void FlagTrap::takedamage(unsigned int amount) {
-  if (this->HitPoint > amount) {
-    std::cout << "FlagTrap " << this->name << " take damage amount of "
-              << amount << std::endl;
-    this->HitPoint -= amount;
-  } else if (this->HitPoint > 0) {
-    std::cout << "FlagTrap " << this->name << " take damage amount of "
-              << amount << std::endl;
-    this->HitPoint = 0;
-    std::cout << "your class die" << std::endl;
-  } else
-    std::cout << "your class die" << std::endl;
-}
-
-void FlagTrap::beRepaired(unsigned int amount) {
-  if (this->HitPoint > 0 && this->EnergyPoint > 0) {
-    std::cout << "FlagTrap " << this->name << " be repaired (" << amount
-              << "points)" << std::endl;
-    this->EnergyPoint -= 1;
-    this->HitPoint += amount;
-  } else
-    std::cout << "FlagTrap Cannot be repaired" << std::endl;
-}

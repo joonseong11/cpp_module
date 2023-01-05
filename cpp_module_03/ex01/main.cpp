@@ -8,6 +8,7 @@ int main() {
 	std::cout << "======================" << std::endl;
 	std::cout << "Create ScavTrap class" << std::endl;
 	ScavTrap b("S_b");
+	b.attack("test");
 
 	std::cout << "======================" << std::endl;
 	b.guardGate();
