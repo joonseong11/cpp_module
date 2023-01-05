@@ -40,21 +40,21 @@ void ScavTrap::guardGate() {
 
 void ScavTrap::attack(const std::string& target) {
   if (this->EnergyPoint > 0 && this->HitPoint > 0) {
-    std::cout << "ClapTrap " << this->name << " attacks " << target
+    std::cout << "ScavTrap " << this->name << " attacks " << target
               << " causing " << this->AttackDamage << " points of damage!"
               << std::endl;
     this->EnergyPoint -= 1;
   } else
-    std::cout << "ClapTrap Cannot attack" << std::endl;
+    std::cout << "ScavTrap Cannot attack" << std::endl;
 }
 
-void ClapTrap::takedamage(unsigned int amount) {
+void ScavTrap::takedamage(unsigned int amount) {
   if (this->HitPoint > amount) {
-    std::cout << "ClapTrap " << this->name << " take damage amount of "
+    std::cout << "ScavTrap " << this->name << " take damage amount of "
               << amount << std::endl;
     this->HitPoint -= amount;
   } else if (this->HitPoint > 0) {
-    std::cout << "ClapTrap " << this->name << " take damage amount of "
+    std::cout << "ScavTrap " << this->name << " take damage amount of "
               << amount << std::endl;
     this->HitPoint = 0;
     std::cout << "your class die" << std::endl;
@@ -62,12 +62,12 @@ void ClapTrap::takedamage(unsigned int amount) {
     std::cout << "your class die" << std::endl;
 }
 
-void ClapTrap::beRepaired(unsigned int amount) {
+void ScavTrap::beRepaired(unsigned int amount) {
   if (this->HitPoint > 0 && this->EnergyPoint > 0) {
-    std::cout << "ClapTrap " << this->name << " be repaired (" << amount
+    std::cout << "ScavTrap " << this->name << " be repaired (" << amount
               << "points)" << std::endl;
     this->EnergyPoint -= 1;
     this->HitPoint += amount;
   } else
-    std::cout << "ClapTrap Cannot be repaired" << std::endl;
+    std::cout << "ScavTrap Cannot be repaired" << std::endl;
 }
