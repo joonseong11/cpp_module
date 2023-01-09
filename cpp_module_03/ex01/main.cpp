@@ -13,12 +13,12 @@ int main() {
 	std::cout << "======================" << std::endl;
 	b.guardGate();
 	a.attack("hit other robot!!");
-	b.takedamage(20);
-	b.takedamage(20);
-	b.takedamage(20);
-	b.takedamage(20);
+	b.takeDamage(20);
+	b.takeDamage(20);
+	b.takeDamage(20);
+	b.takeDamage(20);
 	b.beRepaired(20);
-	b.takedamage(20);
-	b.takedamage(20);
+	b.takeDamage(20);
+	b.takeDamage(20);
 	b.beRepaired(20);
 }

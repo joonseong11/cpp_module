@@ -7,9 +7,9 @@ int main() {
 	
 	a.attack("AppleRobot");
 	a.attack("AppleRobot");
-	a.takedamage(5);
+	a.takeDamage(5);
 	a.beRepaired(5);
-	a.takedamage(10);
+	a.takeDamage(10);
 	a.beRepaired(5);
 	return 0;
 }

@@ -24,13 +24,13 @@ int main() {
 	std::cout << "======================" << std::endl;
 	c.highFivesGyus();
 	a.attack("c");
-	c.takedamage(0);
+	c.takeDamage(0);
 	b.attack("c");
-	c.takedamage(20);
+	c.takeDamage(20);
 	d.attack("c");
-	c.takedamage(50);
+	c.takeDamage(50);
 	c.beRepaired(20);
 	d.attack("c");
-	c.takedamage(50);
+	c.takeDamage(50);
 	c.attack("hit around");
 }

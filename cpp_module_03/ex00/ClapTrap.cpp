@@ -37,7 +37,7 @@ void ClapTrap::attack(const std::string& target) {
 		std::cout << "ClapTrap Cannot attack" << std::endl;
 }
 
-void ClapTrap::takedamage(unsigned int amount) {
+void ClapTrap::takeDamage(unsigned int amount) {
 	if (this->HitPoint > amount) {
 		std::cout << "ClapTrap " << this->name << " take damage amount of " << amount
 			<< std::endl;
