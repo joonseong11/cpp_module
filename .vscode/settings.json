@@ -67,6 +67,10 @@
 		"stack": "cpp",
 		"iterator": "cpp",
 		"memory_resource": "cpp",
-		"filesystem": "cpp"
+		"filesystem": "cpp",
+		"__functional_base": "cpp",
+		"bit": "cpp",
+		"functional": "cpp",
+		"utility": "cpp"
 	}
 }
