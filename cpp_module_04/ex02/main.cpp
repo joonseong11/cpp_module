@@ -46,7 +46,5 @@ int main () {
 	std::cout << "cat1 idea[1] : " << cat1.getIdeas(1) << std::endl;
 	std::cout << "cat2 idea[0] : " << cat2.getIdeas(0) << std::endl;
 	std::cout << "cat2 idea[1] : " << cat2.getIdeas(1) << std::endl;
-
-	system("leaks abstract | grep leak");
 	return 0;
 }
