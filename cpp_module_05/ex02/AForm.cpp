@@ -27,11 +27,12 @@ unsigned int AForm::try_catch(unsigned int grade_) {
 }
 
 AForm::AForm(void) : name("default"), check(false), grade_to_sign(150), 
-	grade_to_exec(150) {}
+	grade_to_exec(150), target("default") {}
 AForm::AForm(const AForm& src) : name(src.name), check(src.check), 
-	grade_to_sign(src.grade_to_sign), grade_to_exec(src.grade_to_exec){}
+	grade_to_sign(src.grade_to_sign), grade_to_exec(src.grade_to_exec), target("default") {}
 AForm::AForm(std::string name, unsigned int grade_to_sign, unsigned int grade_to_exec)
-	: name(name), grade_to_sign(try_catch(grade_to_sign)), grade_to_exec(try_catch(grade_to_exec)) {};
+	: name(name), grade_to_sign(try_catch(grade_to_sign)), grade_to_exec(try_catch(grade_to_exec)), 
+	target("default"){};
 AForm::~AForm(void) {}
 AForm& AForm::operator=(AForm const& rhs) {
     check = rhs.check;
@@ -58,4 +59,12 @@ void AForm::beSigned(Bureaucrat &brc) {
 		throw GradeTooLowException();
 	if (this->check != true)
 		this->check = true;
+}
+
+void AForm::setCheck(bool check) {
+	this->check = check;
+}
+
+std::string AForm::getTarget(void) const {
+	return target;
 }
