@@ -1,31 +1,46 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
-	std::cout << "\n" << "test1" << std::endl;
-	Bureaucrat a("hey", 10);
-	try {
-		Form b("test", 0, 100);
-		std::cout << "debug1" << std::endl;
-	}
-	catch (std::exception& e) {
-		std::cout << e.what() << std::endl;
-	}
-	try {
-		Form c("test", 10, 151);
-	}
-	catch (std::exception& e) {
-		std::cout << e.what() << std::endl;
-	}
-
-	std::cout << "\n" << "test2" << std::endl;
-	Bureaucrat tom("tom", 15);
-	Form form1("form1", 10, 5);
-	tom.signForm(form1);
-	Bureaucrat cat("cat", 5);
-	Form form2("form2", 5, 5);
-	cat.signForm(form1);
-	cat.signForm(form2);
+	std::cout << "pardon form : sign 25, exec 5" << std::endl;
+	std::cout << "robot form : sign 72, exec 45" << std::endl;
+	std::cout << "shrub form : sign 145, exec 137" << std::endl;
 	
+	std::cout << "\n" << "============= Creation ===============" << "\n" << std::endl;
+	Bureaucrat bureaucrat_king("king", 1);
+	Bureaucrat bureaucrat_alpha("alpha", 25);
+	Bureaucrat bureaucrat_beta("beta", 72);
+	Bureaucrat bureaucrat_gama("gama", 145);
+	Bureaucrat bureaucrat_slave("slave", 150);
+	Bureaucrat bureaucrat_test("test", 151);
+
+	std::cout << "\n" << "============= Form creation ===============" << "\n" << std::endl;
+	PresidentialPardonForm ppf("target_pardon");
+	RobotomyRequestForm rrf("target_robot");
+	ShrubberyCreationForm scf("target_shrub");
+
+	std::cout << "\n" << "============= Presidential Pardon Form ===============" << "\n" << std::endl;
+	bureaucrat_alpha.executeForm(ppf);
+	bureaucrat_alpha.signForm(ppf);
+	bureaucrat_alpha.executeForm(ppf);
+	bureaucrat_king.executeForm(ppf);
+
+	std::cout << "\n" << "============= Robotomy Request Form ===============" << "\n" << std::endl;
+	bureaucrat_gama.executeForm(rrf);
+	bureaucrat_gama.signForm(rrf);
+	bureaucrat_beta.signForm(rrf);
+	bureaucrat_beta.executeForm(rrf);
+	bureaucrat_alpha.executeForm(rrf);
+
+	std::cout << "\n" << "============= Shrub Creation Form ===============" << "\n" << std::endl;
+	bureaucrat_slave.executeForm(scf);
+	bureaucrat_slave.signForm(scf);
+	bureaucrat_gama.signForm(scf);
+	bureaucrat_gama.executeForm(scf);
+	bureaucrat_beta.executeForm(scf);
+
+	return 0;
 }
