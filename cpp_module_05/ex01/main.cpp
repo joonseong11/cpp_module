@@ -33,4 +33,6 @@ int main()
 	micah.increaseGrade();
 	Bureaucrat jrim("jrim", 150);
 	jrim.decreaseGrade();
+	std::cout << "\n" << "=============== test4 =================" << std::endl;
+	std::cout << micah << std::endl;
 }
