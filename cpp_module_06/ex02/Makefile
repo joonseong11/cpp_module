@@ -1,4 +1,4 @@
-NAME		=	data
+NAME		=	base
 
 RED			=	\033[0;31m
 GRN			= 	\033[0;32m
@@ -11,7 +11,7 @@ CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98
 RM			=	rm -f
 
 SRC			=	main.cpp \
-				Data.cpp
+				Base.cpp
 				
 OBJ			=	$(SRC:.cpp=.o)
 
