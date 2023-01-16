@@ -1,3 +1,6 @@
+#ifndef MAIN_HPP
+# define MAIN_HPP
+
 #include <iostream>
 
 template <typename T>
@@ -24,3 +27,5 @@ T& max(T& a, T& b) {
 	else
 		return a;
 }
+
+#endif
