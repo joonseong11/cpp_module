@@ -5,8 +5,8 @@ int main() {
 
 	std::vector<int> myvector (myints, myints+4);
 	std::list<int> mylist(myints, myints+4);
-	easyfind(myvector, 330);
-	easyfind(mylist, 330);
+	easyfind(myvector, 30);
+	easyfind(mylist, 30);
 
 	return 0;
 }
