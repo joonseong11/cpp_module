@@ -2,6 +2,7 @@
 # define EASYFIND_HPP
 
 #include <vector>
+#include <list>
 #include <iostream>
 #include <algorithm>
 #include <stdexcept>
