@@ -8,7 +8,8 @@ template <typename T>
 typename T::iterator easyfind(const T &container, int num) {
 	
 	typename T::iterator itr = T.begin();
-	return ;
+	for (; itr != num; ++itr) ;
+	return itr;
 }
 
 #endif
