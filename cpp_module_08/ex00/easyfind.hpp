@@ -17,7 +17,7 @@ typename T::iterator easyfind(const T &container, int num) {
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
-	return itr;
+	return itr; // hey
 }
 
 #endif
