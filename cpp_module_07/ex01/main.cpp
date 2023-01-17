@@ -2,9 +2,10 @@
 
 int main() {
 
-	int a[5] = {1,2,3,4,5};
+	const int a[5] = {1,2,3,4,5};
 	std::string b[3] = {"salut", "bonjour", "Au revior"};
 
-	Iter(a, 5, print);
-	Iter(b, 3, print);
+	iter(a, 5, print);
+	iter(b, 3, print);
+
 }
