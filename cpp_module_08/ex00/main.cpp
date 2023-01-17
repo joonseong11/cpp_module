@@ -1,10 +1,13 @@
 #include "easyfind.hpp"
 
 int main() {
-	int myints[] = {10, 20, 30, 40};
+	// int myints[] = {10, 20, 30, 40};
+	std::vector<int> myints(4, 4);
 
-	std::vector<int> myvector (myints, myints+4);
-	std::list<int> mylist(myints, myints+4);
+	// std::vector<int> myvector (myints, myints+4);
+	// std::list<int> mylist(myints, myints+4);
+	std::vector<int> myvector (myints.begin(), myints.end());
+	std::list<int> mylist(myints.begin(), myints.end());
 	easyfind(myvector, 30);
 	easyfind(mylist, 30);
 	easyfind(myvector, 330);
