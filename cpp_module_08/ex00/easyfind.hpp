@@ -9,10 +9,11 @@
 
 template <typename T>
 typename T::iterator easyfind(const T &container, int num) {
-	typename T::iterator itr;
-	// itr = std::find(container.begin(), container.end(), num);
+	T itr;
+	itr = std::find(container.begin(), container.end(), num);
 	try {
-		if (std::find(container.begin(), container.end(), num) == container.end())
+		// if (std::find(container.begin(), container.end(), num) == container.end())
+		if (itr == container.end())
 			throw std::runtime_error("found nothing");
 	}
 	catch (std::exception &e) {
