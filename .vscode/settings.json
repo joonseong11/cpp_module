@@ -71,6 +71,8 @@
 		"__functional_base": "cpp",
 		"bit": "cpp",
 		"functional": "cpp",
-		"utility": "cpp"
+		"utility": "cpp",
+		"list": "cpp",
+		"numeric": "cpp"
 	}
 }
